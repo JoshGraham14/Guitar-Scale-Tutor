@@ -10,7 +10,7 @@ export const Scale = (props: Props) => {
 
 	const { note, scaleType } = props
 
-	import(`../assets/${note}_${scaleType}.svg`).then(module => {
+	import(`../assets/scales/${note}_${scaleType}.svg`).then(module => {
 		setScale(module.default)
 	})
 
