@@ -18,3 +18,8 @@ section {
 	gap: 0.5rem;
 	font-size: 1.5rem;
 }
+
+.scales-container {
+	display: flex;
+	gap: 2rem;
+}

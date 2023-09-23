@@ -65,7 +65,27 @@ function App() {
 						/>
 					</span>
 				</div>
-				<Scale note={note} scaleType={scale} scaleTitle={scaleTitle} />
+				<div className='scales-container'>
+					{scale == 'All' ? (
+						scaleTypeOptions.map((option: Option) => {
+							if (option.label !== 'All')
+								return (
+									<Scale
+										note={note}
+										scaleType={option.value}
+										scaleTitle={scaleTitle}
+										key={`${note} ${option.value}`}
+									/>
+								)
+						})
+					) : (
+						<Scale
+							note={note}
+							scaleType={scale}
+							scaleTitle={scaleTitle}
+						/>
+					)}
+				</div>
 			</section>
 		</>
 	)

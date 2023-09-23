@@ -21,4 +21,5 @@ export const noteOptions: Option[] = [
 export const scaleTypeOptions: Option[] = [
 	{ value: 'Major', label: 'Major' },
 	{ value: 'Minor', label: 'Minor' },
+	{ value: 'All', label: 'All' },
 ]
