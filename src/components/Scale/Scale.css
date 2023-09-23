@@ -1,0 +1,17 @@
+.scale-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.5));
+}
+
+.scale-wrapper h1 {
+	background-color: white;
+	padding: 0.5rem 1rem;
+	border-top-right-radius: 0.75rem;
+	border-top-left-radius: 0.75rem;
+}
+
+.scale-svg {
+	width: 80%;
+}
