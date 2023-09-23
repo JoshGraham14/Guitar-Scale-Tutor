@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 type Props = {
 	note: string
 	scaleType: string
+	noteTitle: string
 	scaleTitle: string
 }
 
@@ -10,7 +11,7 @@ export const Scale = (props: Props) => {
 	const [scale, setScale] = useState<string>('')
 	const [errorMessage, setErrorMessage] = useState<string>('')
 
-	const { note, scaleType, scaleTitle } = props
+	const { note, scaleType, noteTitle, scaleTitle } = props
 
 	useEffect(() => {
 		import(`../assets/scales/${note}_${scaleType}.svg`)
@@ -26,9 +27,9 @@ export const Scale = (props: Props) => {
 	return errorMessage === '' ? (
 		<div>
 			<h1>
-				{scaleTitle === '' || scaleType === ''
+				{noteTitle === '' || scaleType === ''
 					? ''
-					: `${scaleTitle} ${scaleType}`}
+					: `${noteTitle} ${scaleTitle}`}
 			</h1>
 			<img src={scale}></img>
 		</div>

@@ -1,25 +1,27 @@
+import { useState } from 'react'
+import Select from 'react-select'
+
 import './App.css'
 import { Scale } from './components/Scale'
-import Select from 'react-select'
 import { Option, noteOptions, scaleTypeOptions } from './data'
-
-import { useState } from 'react'
 
 function App() {
 	const [scale, setScale] = useState<string>('')
 	const [note, setNote] = useState<string>('')
+	const [noteTitle, setNoteTitle] = useState<string>('')
 	const [scaleTitle, setScaleTitle] = useState<string>('')
 
 	const onNoteChange = (option: Option | null): void => {
 		if (option !== null) {
 			setNote(option.value)
-			setScaleTitle(option.label)
+			setNoteTitle(option.label)
 		}
 	}
 
 	const onScaleChange = (option: Option | null): void => {
 		if (option !== null) {
 			setScale(option.value)
+			setScaleTitle(option.label)
 		}
 	}
 
@@ -56,7 +58,7 @@ function App() {
 							styles={{
 								control: baseStyles => ({
 									...baseStyles,
-									width: '10rem',
+									width: '15rem',
 									'&:hover': {
 										cursor: 'pointer',
 									},
@@ -73,17 +75,21 @@ function App() {
 									<Scale
 										note={note}
 										scaleType={option.value}
+										noteTitle={noteTitle}
 										scaleTitle={scaleTitle}
 										key={`${note} ${option.value}`}
 									/>
 								)
 						})
-					) : (
+					) : note !== '' && scale !== '' ? (
 						<Scale
 							note={note}
 							scaleType={scale}
+							noteTitle={noteTitle}
 							scaleTitle={scaleTitle}
 						/>
+					) : (
+						''
 					)}
 				</div>
 			</section>
