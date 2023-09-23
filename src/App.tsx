@@ -40,6 +40,9 @@ function App() {
 								control: baseStyles => ({
 									...baseStyles,
 									width: '10rem',
+									'&:hover': {
+										cursor: 'pointer',
+									},
 								}),
 							}}
 						/>
@@ -54,6 +57,9 @@ function App() {
 								control: baseStyles => ({
 									...baseStyles,
 									width: '10rem',
+									'&:hover': {
+										cursor: 'pointer',
+									},
 								}),
 							}}
 						/>
