@@ -21,5 +21,7 @@ export const noteOptions: Option[] = [
 export const scaleTypeOptions: Option[] = [
 	{ value: 'Major', label: 'Major' },
 	{ value: 'Minor', label: 'Minor' },
+	{ value: 'Major_Pentatonic', label: 'Major Pentatonic' },
+	{ value: 'Minor_Pentatonic', label: 'Minor Pentatonic' },
 	{ value: 'All', label: 'All' },
 ]
