@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type Props = {
 	note: string
@@ -8,14 +8,23 @@ type Props = {
 
 export const Scale = (props: Props) => {
 	const [scale, setScale] = useState<string>('')
+	const [errorMessage, setErrorMessage] = useState<string>('')
 
 	const { note, scaleType, scaleTitle } = props
 
-	import(`../assets/scales/${note}_${scaleType}.svg`).then(module => {
-		setScale(module.default)
-	})
+	useEffect(() => {
+		import(`../assets/scales/${note}_${scaleType}.svg`)
+			.then(module => {
+				console.log('It was found!')
+				setScale(module.default)
+				setErrorMessage('')
+			})
+			.catch(() => {
+				setErrorMessage('Scale was not found.')
+			})
+	}, [note, scaleType])
 
-	return (
+	return errorMessage === '' ? (
 		<div>
 			<h1>
 				{scaleTitle === '' || scaleType === ''
@@ -24,5 +33,7 @@ export const Scale = (props: Props) => {
 			</h1>
 			<img src={scale}></img>
 		</div>
+	) : (
+		<h3>{errorMessage}</h3>
 	)
 }
