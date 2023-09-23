@@ -21,6 +21,9 @@ section {
 
 .scales-container {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 75%;
 	flex-wrap: wrap;
 	gap: 2rem;
 }

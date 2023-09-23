@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Select from 'react-select'
 
 import './App.css'
-import { Scale } from './components/Scale'
+import { Scale } from './components/Scale/Scale'
 import { Option, noteOptions, scaleTypeOptions } from './data'
 
 function App() {
