@@ -76,7 +76,7 @@ function App() {
 										note={note}
 										scaleType={option.value}
 										noteTitle={noteTitle}
-										scaleTitle={scaleTitle}
+										scaleTitle={option.label}
 										key={`${note} ${option.value}`}
 									/>
 								)
