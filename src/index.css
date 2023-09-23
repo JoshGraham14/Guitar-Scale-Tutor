@@ -6,3 +6,13 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+:root {
+	--background-colour: #d3c4f7;
+}
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 700;
+	background-color: var(--background-colour);
+}
