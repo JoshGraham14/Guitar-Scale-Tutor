@@ -15,7 +15,6 @@ export const Scale = (props: Props) => {
 	useEffect(() => {
 		import(`../assets/scales/${note}_${scaleType}.svg`)
 			.then(module => {
-				console.log('It was found!')
 				setScale(module.default)
 				setErrorMessage('')
 			})
