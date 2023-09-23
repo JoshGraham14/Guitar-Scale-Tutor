@@ -1,0 +1,20 @@
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+}
+
+.options-container {
+	display: flex;
+	gap: 5em;
+}
+
+.option {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	gap: 0.5rem;
+	font-size: 1.5rem;
+}
