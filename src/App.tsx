@@ -28,7 +28,7 @@ function App() {
 	return (
 		<>
 			<header>
-				<h1>Guitar Scales</h1>
+				<h1 className='title'>Guitar Scales</h1>
 			</header>
 			<section>
 				<div className='options-container'>
@@ -41,7 +41,6 @@ function App() {
 							styles={{
 								control: baseStyles => ({
 									...baseStyles,
-									width: '10rem',
 									'&:hover': {
 										cursor: 'pointer',
 									},
@@ -58,7 +57,6 @@ function App() {
 							styles={{
 								control: baseStyles => ({
 									...baseStyles,
-									width: '15rem',
 									'&:hover': {
 										cursor: 'pointer',
 									},

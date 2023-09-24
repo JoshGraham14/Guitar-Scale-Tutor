@@ -1,4 +1,17 @@
+header {
+	background-color: var(--darker-background-colour);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-block: 0.5rem;
+}
+
+.title {
+	color: white;
+}
+
 section {
+	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,6 +32,14 @@ section {
 	font-size: 1.5rem;
 }
 
+#note-select {
+	width: 10rem;
+}
+
+#scale-select {
+	width: 17rem;
+}
+
 .scales-container {
 	display: flex;
 	justify-content: center;
@@ -26,4 +47,35 @@ section {
 	width: 75%;
 	flex-wrap: wrap;
 	gap: 2rem;
+}
+
+@media (max-width: 800px) {
+	.options-container {
+		gap: 3em;
+	}
+
+	.option {
+		gap: 0.3rem;
+		font-size: 1rem;
+	}
+
+	#note-select {
+		width: 8rem;
+	}
+
+	#scale-select {
+		width: 12rem;
+	}
+}
+
+@media (max-width: 570px) {
+	.options-container {
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 1rem;
+	}
+
+	#note-select {
+		width: 12rem;
+	}
 }

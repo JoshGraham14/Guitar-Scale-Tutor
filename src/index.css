@@ -9,11 +9,11 @@
 
 :root {
 	--background-colour: #d3c4f7;
-	--darker-background-colour: #9381bd;
+	--darker-background-colour: #5f527c;
 }
 
 body {
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 700;
-	background-color: var(--darker-background-colour);
+	background-color: var(--background-colour);
 }
