@@ -13,5 +13,37 @@
 }
 
 .scale-svg {
-	width: 80%;
+	width: 30rem;
+}
+
+@media (max-width: 1350px) {
+	.scale-svg {
+		width: 25rem;
+	}
+
+	.scale-wrapper h1 {
+		font-size: 1.3rem;
+		padding: 0.4rem 0.9rem;
+	}
+}
+
+@media (max-width: 1120px) {
+	.scale-svg {
+		width: 22rem;
+	}
+
+	.scale-wrapper h1 {
+		font-size: 1.1rem;
+		padding: 0.2rem 0.8rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.scale-svg {
+		width: 18rem;
+	}
+
+	.scale-wrapper h1 {
+		font-size: 1rem;
+	}
 }
