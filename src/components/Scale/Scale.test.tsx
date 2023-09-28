@@ -2,12 +2,14 @@ import { render, screen } from '@testing-library/react'
 import { Scale } from './Scale'
 
 test('renders correctly', () => {
+	// Major scale
 	render(
 		<Scale note='G' scaleType='Major' noteTitle='G' scaleTitle='Major' />
 	)
 	const scaleName1 = screen.getByText('G Major')
 	expect(scaleName1).toBeInTheDocument()
 
+	// Minor Pentatonic scale
 	render(
 		<Scale
 			note='Eb'
@@ -20,12 +22,13 @@ test('renders correctly', () => {
 	const scaleName2 = screen.getByText('D#/Eb Minor Pentatonic')
 	expect(scaleName2).toBeInTheDocument()
 
+	// Minor scale
 	render(
 		<Scale note='B' scaleType='Minor' noteTitle='B' scaleTitle='Minor' />
 	)
 	const scaleName3 = screen.getByText('B Minor')
 	expect(scaleName3).toBeInTheDocument()
-
+	// Major Pentatonic scale
 	render(
 		<Scale
 			note='Ab'
