@@ -15,6 +15,7 @@
 body {
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 700;
+	background-image: url(../src/assets/music_notes.png);
 	background-color: var(--background-colour);
 }
 
