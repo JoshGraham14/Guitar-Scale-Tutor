@@ -17,3 +17,8 @@ body {
 	font-weight: 700;
 	background-color: var(--background-colour);
 }
+
+p {
+	font-weight: 400;
+	line-height: 1.6;
+}
