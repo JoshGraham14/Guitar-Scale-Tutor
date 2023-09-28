@@ -4,6 +4,7 @@ import Select from 'react-select'
 import './App.css'
 import { Scale } from './components/Scale/Scale'
 import { Option, noteOptions, scaleTypeOptions } from './data'
+import { Info } from './components/Info/Info'
 
 function App() {
 	const [scale, setScale] = useState<string>('')
@@ -87,7 +88,7 @@ function App() {
 							scaleTitle={scaleTitle}
 						/>
 					) : (
-						''
+						<Info />
 					)}
 				</div>
 			</section>
