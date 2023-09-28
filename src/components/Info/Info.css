@@ -1,7 +1,21 @@
 .info-container {
-	width: 75ch;
+	/* width: 75ch; */
+	width: 125ch;
+	padding: 2rem;
+	background-color: white;
+	color: var(--darker-background-colour);
+	border-radius: 1rem;
+	margin-bottom: 1rem;
 }
 
 .info-container p {
 	margin-block: 1rem;
+	font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {
+	.info-container {
+		width: 100%;
+		padding: 1rem;
+	}
 }

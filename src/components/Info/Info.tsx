@@ -12,7 +12,7 @@ export const Info = () => {
 			</p>
 			<br />
 			<h1>How do I read the scale?</h1>
-			<p>First, it is assumed that your guitar is in standard tuning.</p>
+			<p>It is assumed that your guitar is in standard tuning.</p>
 			<p>
 				From top to bottom, the strings in the diagram are: e, B, G, D,
 				A, E (Note the lower-case 'e' representing the high E string)
@@ -26,6 +26,7 @@ export const Info = () => {
 				example, if you select a major scale, the interval between the
 				circles labelled 1 and 3 will be a major third.
 			</p>
+			<br />
 			<h1>Will more scales be added?</h1>
 			<p>
 				Yes! In the future new scales will be added such as blues,
@@ -40,9 +41,6 @@ export const Info = () => {
 			<center>
 				<p>Have fun learning!</p>
 			</center>
-			<br />
-			<br />
-			<br />
 		</div>
 	)
 }
