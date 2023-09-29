@@ -3,6 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.5));
+	z-index: -1;
 }
 
 .scale-wrapper h1 {
