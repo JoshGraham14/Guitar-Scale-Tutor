@@ -23,5 +23,6 @@ export const scaleTypeOptions: Option[] = [
 	{ value: 'Minor', label: 'Minor' },
 	{ value: 'Major_Pentatonic', label: 'Major Pentatonic' },
 	{ value: 'Minor_Pentatonic', label: 'Minor Pentatonic' },
+	{ value: 'Blues', label: 'Blues' },
 	{ value: 'All', label: 'All' },
 ]
