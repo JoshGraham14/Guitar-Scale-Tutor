@@ -12,7 +12,10 @@ export const Info = () => {
 			</p>
 			<br />
 			<h1>How do I read the scale?</h1>
-			<p>It is assumed that your guitar is in standard tuning.</p>
+			<p>
+				It is assumed that your guitar is in standard tuning. Any scale
+				can be shifted up/down 12 frets to change the octave.
+			</p>
 			<p>
 				From top to bottom, the strings in the diagram are: e, B, G, D,
 				A, E (Note the lower-case 'e' representing the high E string)
@@ -29,9 +32,9 @@ export const Info = () => {
 			<br />
 			<h1>Will more scales be added?</h1>
 			<p>
-				Yes! In the future new scales will be added such as blues,
-				harmonic & melodic minor, as well as modes of the major and
-				minor scales.
+				Yes! In the future new scales will be added such as
+				harmonic/melodic minor scales as well as the modes of the major
+				and minor scales.
 			</p>
 			<p>
 				As this is just a personal project, there is no exact timeline
