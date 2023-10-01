@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import Select from 'react-select'
+import Toggle from 'react-toggle'
+import 'react-toggle/style.css'
 
 import './App.css'
 import { Scale } from './components/Scale/Scale'
@@ -11,11 +13,18 @@ function App() {
 	const [note, setNote] = useState<string>('')
 	const [noteTitle, setNoteTitle] = useState<string>('')
 	const [scaleTitle, setScaleTitle] = useState<string>('')
+	const [showInfo, setShowInfo] = useState<boolean>(true)
 
 	const onNoteChange = (option: Option | null): void => {
 		if (option !== null) {
 			setNote(option.value)
 			setNoteTitle(option.label)
+			// ensure the info is hidden if a new note has been selected
+			// (only if a scale is already being displayed)
+			if (scale !== '') {
+				setShowInfo(false)
+				console.log('showInfo is false')
+			}
 		}
 	}
 
@@ -23,7 +32,17 @@ function App() {
 		if (option !== null) {
 			setScale(option.value)
 			setScaleTitle(option.label)
+			// ensure the info is hidden if a new scale has been selected
+			// (only if a scale is already being displayed)
+			if (note !== '') {
+				setShowInfo(false)
+				console.log('showInfo is false')
+			}
 		}
+	}
+
+	const onInfoChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+		setShowInfo(e.target.checked)
 	}
 
 	return (
@@ -32,7 +51,7 @@ function App() {
 				<h1 className='title'>Guitar Scales</h1>
 			</header>
 			<section>
-				<div className='options-container'>
+				<form className='options-container'>
 					<span className='option'>
 						<label htmlFor='note-select'>Note: </label>
 						<Select
@@ -65,9 +84,20 @@ function App() {
 							}}
 						/>
 					</span>
-				</div>
+					<span className='option'>
+						<label htmlFor='info-toggle'>Show Info: </label>
+						<Toggle
+							id='info-toggle'
+							defaultChecked={true}
+							checked={showInfo}
+							onChange={onInfoChange}
+						/>
+					</span>
+				</form>
 				<div className='scales-container'>
-					{scale == 'All' ? (
+					{showInfo ? (
+						<Info />
+					) : scale == 'All' ? (
 						scaleTypeOptions.map((option: Option) => {
 							if (option.label !== 'All')
 								return (
