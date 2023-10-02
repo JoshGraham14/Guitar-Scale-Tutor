@@ -118,7 +118,7 @@ function App() {
 							scaleTitle={scaleTitle}
 						/>
 					) : (
-						<Info />
+						''
 					)}
 				</div>
 			</section>
