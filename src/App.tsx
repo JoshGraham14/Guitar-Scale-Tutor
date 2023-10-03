@@ -46,7 +46,7 @@ function App() {
 	return (
 		<>
 			<header>
-				<h1 className='title'>Guitar Scales</h1>
+				<h1 className='title'>Guitar Scale Tutor</h1>
 			</header>
 			<section>
 				<form className='options-container'>
