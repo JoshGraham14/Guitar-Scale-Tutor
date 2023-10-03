@@ -37,11 +37,11 @@ section {
 	font-size: 1.5rem;
 }
 
-#note-select {
+#note-select-box {
 	width: 10rem;
 }
 
-#scale-select {
+#scale-select-box {
 	width: 17rem;
 }
 
@@ -81,11 +81,11 @@ section {
 		font-size: 1rem;
 	}
 
-	#note-select {
+	#note-select-box {
 		width: 8rem;
 	}
 
-	#scale-select {
+	#scale-select-box {
 		width: 12rem;
 	}
 }
@@ -108,10 +108,7 @@ section {
 		margin-left: 0.5ch;
 	}
 
-	#note-select {
+	#note-select-box {
 		width: 12rem;
 	}
-}
-
-@media (max-width: 570px) {
 }
