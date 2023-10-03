@@ -53,7 +53,8 @@ function App() {
 					<span className='option'>
 						<label htmlFor='note-select'>Note: </label>
 						<Select
-							id='note-select'
+							inputId={'note-select'}
+							id='note-select-box'
 							options={noteOptions}
 							onChange={onNoteChange}
 							styles={{
@@ -69,7 +70,8 @@ function App() {
 					<span className='option'>
 						<label htmlFor='scale-select'>Scale Type: </label>
 						<Select
-							id='scale-select'
+							inputId={'scale-select'}
+							id='scale-select-box'
 							options={scaleTypeOptions}
 							onChange={onScaleChange}
 							styles={{
