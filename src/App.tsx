@@ -23,7 +23,6 @@ function App() {
 			// (only if a scale is already being displayed)
 			if (scale !== '') {
 				setShowInfo(false)
-				console.log('showInfo is false')
 			}
 		}
 	}
@@ -36,7 +35,6 @@ function App() {
 			// (only if a scale is already being displayed)
 			if (note !== '') {
 				setShowInfo(false)
-				console.log('showInfo is false')
 			}
 		}
 	}
@@ -88,7 +86,6 @@ function App() {
 						<label htmlFor='info-toggle'>Show Info: </label>
 						<Toggle
 							id='info-toggle'
-							defaultChecked={true}
 							checked={showInfo}
 							onChange={onInfoChange}
 						/>
