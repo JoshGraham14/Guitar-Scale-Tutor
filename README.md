@@ -1,4 +1,10 @@
-# React + TypeScript + Vite
+# Guitar Scale Tutor
+
+A single page application built with React + TypeScript to help guitarists learn fundamental scales.
+
+As a guitarist myself, I've always struggled with finding an easy-to-use resource that I like for learning scales. Guitar Scale Tutor is my solution to that problem, providing an easy way to quickly reference scales on mobile or desktop.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
